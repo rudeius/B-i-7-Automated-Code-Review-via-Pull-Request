@@ -15,7 +15,7 @@ public abstract class Account {
     private static final Logger LOG = LoggerFactory.getLogger(Account.class);
 
     /** Loại tài khoản vãng lai. */
-    public static final String CHECKING_TYPE = "CHECKING";
+    public static final String CHECK_STYLE = "CHECKING";
 
     /** Loại tài khoản tiết kiệm. */
     public static final String SAVINGS_TYPE = "SAVINGS";
