@@ -129,12 +129,15 @@ public class Bank {
 
         long accountNum = Long.parseLong(parts[0]);
         double accountBalance = Double.parseDouble(parts[2]);
-
-        if (Account.CHECKING_TYPE.equals(parts[1])) {
-            current.addAccount(new CheckingAccount(accountNum, accountBalance));
-        } else if (Account.SAVINGS_TYPE.equals(parts[1])) {
-            current.addAccount(new SavingsAccount(accountNum, accountBalance));
-        } else {
+        if(Account.CHECK_STYLE.equals(parts[1]))
+        {
+        current.addAccount(new CheckingAccount(accountNum, accountBalance));
+        }
+        else if (Account.SAVINGS_TYPE.equals(parts[1]))
+        {
+        current.addAccount(new SavingsAccount(accountNum, accountBalance));
+        }
+        else {
             LOG.warn("Loại tài khoản không xác định: {}", parts[1]);
         }
     }
